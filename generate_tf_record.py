@@ -1,3 +1,6 @@
+'''
+Reference repo: https://github.com/EdjeElectronics/TensorFlow-Object-Detection-API-Tutorial-Train-Multiple-Objects-Windows-10/blob/master/generate_tfrecord.py
+'''
 
 import tensorflow as tf
 import pandas as pd
