@@ -95,8 +95,11 @@ class TFRecord:
         grouped = self.split(data, 'filename')
 
         for group in grouped:
-            tf_sample = self.create_tf(group, path)
-            writer.write(tf_sample.SerializeToString())
+            try:
+              tf_sample = self.create_tf(group, path)
+              writer.write(tf_sample.SerializeToString())
+            except:
+              continue
         logging.info('Successfully created the TFRecords: {}'.format(output_path))
 
 
