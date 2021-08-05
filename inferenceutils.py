@@ -42,6 +42,7 @@ def run_inference_for_single_image(model, image):
   # Convert to numpy arrays, and take index [0] to remove the batch dimension.
   # We're only interested in the first num_detections.
   num_detections = int(output_dict.pop('num_detections'))
+  print('num detections:  ' + string(num_detections))
   output_dict = {key:value[0, :num_detections].numpy()
                  for key,value in output_dict.items()}
   output_dict['num_detections'] = num_detections
