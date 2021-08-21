@@ -17,7 +17,7 @@ logging.basicConfig(format='%(levelname)s:%(message)s', level=logging.INFO)
 
 class TFRecord:
     def __init__(self, labelmap_file) -> None:
-        f = open("labelmap.pbtxt", "r")
+        f = open(labelmap_file, "r")
         labelmap = f.read()
         self.class_names = self.init_names(labelmap)
 
